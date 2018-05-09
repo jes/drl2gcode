@@ -42,6 +42,11 @@ M2
 tools = {}
 tsel = "1"
 
+newl3 = "".join(["G1 F", str(Z_MOVE_SPEED), " Z0.2"])
+newl4 = "".join(["G1 F", str(DRILL_MOVE_SPEED), " Z-", str(DRILL_DEPT)])
+newl5 = "".join(["G1 F", str(Z_MOVE_SPEED), " Z", str(RUNNING_HEIGHT)])
+
+
 with open(sys.argv[1]) as fp:  
    line = fp.readline()
    while line:
@@ -65,9 +70,6 @@ with open(sys.argv[1]) as fp:
             if tools[tsel]["output"].endswith(newl1+"\n"):
                newl1 = ''
          newl2 = "".join(["G1 F", str(XY_MOVE_SPEED), " ", line.split("Y")[0], " Y", line.split("Y")[1].strip("\r\n")])
-         newl3 = "".join(["G1 F", str(Z_MOVE_SPEED), " Z0.2"])
-         newl4 = "".join(["G1 F", str(DRILL_MOVE_SPEED), " Z-", str(DRILL_DEPT)])
-         newl5 = "".join(["G1 F", str(Z_MOVE_SPEED), " Z", str(RUNNING_HEIGHT)])
 
          tools[tsel]["output"]+="\n".join([newl1, newl2, newl3, newl4, newl5, ''])
          
