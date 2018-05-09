@@ -75,7 +75,7 @@ with open(sys.argv[1]) as fp:
 
 for t in tools:
    tools[t]["output"]+=footer
-   print "writing", tools[t]["file"]
+   print("writing", tools[t]["file"])
    f = open(tools[t]["file"], "w")
    f.write(tools[t]["output"])
    f.close()
