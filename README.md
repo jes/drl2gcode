@@ -1,3 +1,7 @@
+This is forked from https://git.nexlab.net/machinery/drl2gcode
+
+It was originally created by Franco Lanza and is licensed under the GNU LGPL.
+
 ## installation:
 
 Just download the file and/or clone this git repository and give execution permissions to the grl2gcode.py python script.
