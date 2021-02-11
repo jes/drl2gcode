@@ -28,9 +28,9 @@ Tested on Devuan GNU/Linux only and with kicad.
 
 ## Usage
 
-Using kicad generate an excellion drill file using metric measurements and
-auxiliary axis as drill origin after pointing grid origin on the bottom left
-of your PCB design.
+Using kicad generate an excellion drill file using metric measurements,
+"decimal" zeroes format, and auxiliary axis as drill origin after pointing grid origin
+on the bottom left of your PCB design.
 
     $ ./drl2gcode.py -h
 
