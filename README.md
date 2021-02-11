@@ -20,22 +20,40 @@ Tested on Devuan GNU/Linux only and with kicad.
 
     $ sudo cp drl2gcode.py /usr/local/bin/drl2gcode
 
+## Example
+
+    $ ./drl2gcode.py --spindle-speed 24000 --drill-depth 3 drill.drl
+    writing drill_T01_0.80mm.gcode
+    writing drill_T01_1.00mm.gcode
+
 ## Usage
 
 Using kicad generate an excellion drill file using metric measurements and
 auxiliary axis as drill origin after pointing grid origin on the bottom left
 of your PCB design.
 
-Then, launch ./drl2gcode.py passing as the only argument the file name of the
-generated .drl excellion file.
+    $ ./drl2gcode.py -h
 
-Editing drl2gcode.py you will find some variables you can tweak:
+    usage: drl2gcode.py [-h] [--spindle-speed SPINDLE_SPEED] [--xy-move-speed XY_MOVE_SPEED] [--z-move-speed Z_MOVE_SPEED] [--drill-move-speed DRILL_MOVE_SPEED] [--drill-depth DRILL_DEPTH]
+                        [--safe-height SAFE_HEIGHT]
+                        DRLFILE
 
- * SPINDLE_SPEED = 32000
- * XY_MOVE_SPEED = 3000
- * Z_MOVE_SPEED = 300
- * DRILL_MOVE_SPEED = 100
- * DRILL_DEPT = 2
- * SAFE_HEIGHT = 25
- * RUNNING_HEIGHT = 10
- * TOOL_HEIGHT = 40
+    This program converts Excellion .drl files into G-Code for a CNC machine. Originally by Franco Lanza.
+
+    positional arguments:
+      DRLFILE               Excellion .drl file
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --spindle-speed SPINDLE_SPEED
+                            Set the spindle speed in RPM
+      --xy-move-speed XY_MOVE_SPEED
+                            Set the X/Y travel move speed in mm/min
+      --z-move-speed Z_MOVE_SPEED
+                            Set the Z travel move speed in mm/min
+      --drill-move-speed DRILL_MOVE_SPEED
+                            Set the Z drilling speed in mm/min
+      --drill-depth DRILL_DEPTH
+                            Set the distance to drill below z=0 (positive, larger values go deeper)
+      --safe-height SAFE_HEIGHT
+                            Set the Z coordinate to use for rapid moves
