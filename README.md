@@ -18,6 +18,8 @@ and with any standard excellion drill file
 
 Tested on Devuan GNU/Linux only and with kicad.
 
+    $ sudo cp drl2gcode.py /usr/local/bin/drl2gcode
+
 ## Usage
 
 Using kicad generate an excellion drill file using metric measurements and
