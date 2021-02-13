@@ -1,6 +1,6 @@
 # drl2gcode
 
-This program converts Excellion drill files (such as those produced by KiCad) into G-Code for a CNC machine.
+This program converts Excellon drill files (such as those produced by KiCad) into G-Code for a CNC machine.
 
 ## Provenance
 
@@ -14,7 +14,7 @@ Just download the file and/or clone this git repository and give execution permi
 There are no external dependencies except for python itself.
 
 The script should be able to run on almost any system providing python is installed, it should work with both python 2.x and 3.x
-and with any standard excellion drill file
+and with any standard excellon drill file
 
 Tested on Devuan GNU/Linux only and with kicad.
 
@@ -28,7 +28,7 @@ Tested on Devuan GNU/Linux only and with kicad.
 
 ## Usage
 
-Using kicad generate an excellion drill file using metric measurements,
+Using kicad generate an excellon drill file using metric measurements,
 "decimal" zeroes format, and auxiliary axis as drill origin after pointing grid origin
 on the bottom left of your PCB design.
 
@@ -38,10 +38,10 @@ on the bottom left of your PCB design.
                         [--safe-height SAFE_HEIGHT]
                         DRLFILE
 
-    This program converts Excellion .drl files into G-Code for a CNC machine. Originally by Franco Lanza.
+    This program converts Excellon .drl files into G-Code for a CNC machine. Originally by Franco Lanza.
 
     positional arguments:
-      DRLFILE               Excellion .drl file
+      DRLFILE               Excellon .drl file
 
     optional arguments:
       -h, --help            show this help message and exit

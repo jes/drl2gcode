@@ -3,8 +3,8 @@
 import argparse
 import sys
 
-parser = argparse.ArgumentParser(description="This program converts Excellion .drl files into G-Code for a CNC machine. Originally by Franco Lanza.")
-parser.add_argument('drlfile', metavar='DRLFILE', nargs=1, help='Excellion .drl file')
+parser = argparse.ArgumentParser(description="This program converts Excellon .drl files into G-Code for a CNC machine. Originally by Franco Lanza.")
+parser.add_argument('drlfile', metavar='DRLFILE', nargs=1, help='Excellon .drl file')
 parser.add_argument('--spindle-speed', help="Set the spindle speed in RPM", type=float, default=32000)
 parser.add_argument('--xy-move-speed', help="Set the X/Y travel move speed in mm/min", type=float, default=3000)
 parser.add_argument('--z-move-speed', help="Set the Z travel move speed in mm/min", type=float, default=300)
